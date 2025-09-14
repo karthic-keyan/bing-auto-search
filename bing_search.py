@@ -1,0 +1,31 @@
+name: Daily Bing Search Automation
+
+on:
+  schedule:
+    - cron: '30 3 * * *'  # Runs daily at 3:30 AM UTC (9:00 AM IST)
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  run-bing-search:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Run Bing search automation
+      run: python bing_search.py
+      env:
+        BING_API_KEY: ${{ secrets.BING_API_KEY }}
+        SEARCH_QUERY: "latest technology news"
+        RESULTS_COUNT: "10"
