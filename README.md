@@ -1,6 +1,6 @@
 <!-- @format -->
 
-```markdown
+
 # 🚀 Daily Bing Search Automation
 
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Automated-blue?logo=github-actions)
@@ -22,7 +22,6 @@ Automated daily Bing searches to maximize Microsoft Rewards points using GitHub 
 - 📱 **Headless Operation**: Runs invisibly without GUI
 
 ## 🏗️ Architecture
-```
 
 ┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐
 │ GitHub Actions │───▶│ Python Script │───▶│ Bing.com │
@@ -35,7 +34,7 @@ Automated daily Bing searches to maximize Microsoft Rewards points using GitHub 
 │ (Daily 9 AM) │ │ (Headless) │ │ (Secure Auth) │
 └─────────────────┘ └──────────────────┘ └─────────────────┘
 
-```
+
 
 ## 🚀 Quick Start
 
@@ -48,27 +47,27 @@ Automated daily Bing searches to maximize Microsoft Rewards points using GitHub 
 ### 1. Fork or Create Repository
 
 **Option A: Fork this repository**
-```
+
 
 # Click "Fork" button on GitHub to copy this repository
 
-```
+
 
 **Option B: Create from scratch**
-```
+
 
 # Create new repository on GitHub
 
 git clone https://github.com/YOUR_USERNAME/bing-search-automation.git
 cd bing-search-automation
 
-```
+
 
 ### 2. Set Up Repository Structure
 
 Create these files in your repository:
 
-```
+
 
 bing-search-automation/
 ├── .github/
@@ -79,7 +78,7 @@ bing-search-automation/
 ├── README.md
 └── LICENSE
 
-```
+
 
 ### 3. Configure GitHub Secrets
 
@@ -117,18 +116,18 @@ GitHub Actions workflow that:
 
 ### `requirements.txt`
 Python dependencies:
-```
+
 
 selenium==4.15.0
 
-```
+
 
 ## ⚙️ Configuration
 
 ### Search Topics
 Customize the search topics in `bing_search.py`:
 
-```
+
 
 self.search_topics = [
 "Python programming tutorials",
@@ -136,12 +135,12 @@ self.search_topics = [
 # Add more topics...
 ]
 
-```
+
 
 ### Scheduling
 Modify the cron schedule in the workflow file:
 
-```
+
 
 schedule:
 
@@ -153,16 +152,16 @@ schedule:
 
 # - cron: '0 _/6 _ \* \*' # Every 6 hours
 
-```
+
 
 ### Search Count
 Adjust the number of daily searches:
 
-```
+
 
 searches_completed = self.perform_bing_searches(30) # Change 30 to desired count
 
-```
+
 
 ## 📊 Monitoring & Logs
 
@@ -172,7 +171,7 @@ searches_completed = self.perform_bing_searches(30) # Change 30 to desired count
 3. **Search Summary**: Each run shows completed searches and points earned
 
 ### Log Output Example
-```
+
 
 🚀 Starting Bing Search Automation
 📅 Running for user: use**_@outlook.com
@@ -184,7 +183,7 @@ searches_completed = self.perform_bing_searches(30) # Change 30 to desired count
 🔍 Starting 30 Bing searches...
 🔎 Search 1/30: Python programming tutorials
 ⏳ Waiting 5.2 seconds...
-...
+
 ✅ Completed 30 searches successfully
 📊 Checking Microsoft Rewards points...
 🎯 Current points: 8,450
@@ -195,7 +194,7 @@ searches_completed = self.perform_bing_searches(30) # Change 30 to desired count
 🎉 Daily Bing search automation completed successfully!
 =====================================
 
-```
+
 
 ## 🔧 Troubleshooting
 
@@ -222,12 +221,12 @@ searches_completed = self.perform_bing_searches(30) # Change 30 to desired count
 ### Debug Mode
 Enable verbose logging by modifying the Python script:
 
-```
+
 
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
-```
+
 
 ## 🛡️ Security Best Practices
 
@@ -259,7 +258,7 @@ logging.basicConfig(level=logging.DEBUG)
 4. **Submit pull request** with detailed description
 
 ### Development Setup
-```
+
 
 # Clone repository
 
@@ -276,7 +275,7 @@ export OUTLOOK_USERNAME="your-email@outlook.com"
 export OUTLOOK_PASSWORD="your-password"
 python bing_search.py
 
-```
+
 
 ## 📜 License
 
@@ -307,13 +306,9 @@ This automation tool is for educational purposes. Users are responsible for:
 ---
 
 **⭐ If this project helped you earn more rewards points, please consider starring the repository!**
-```
 
-## Additional Documentation Files
 
-### CONTRIBUTING.md
-
-```markdown
+markdown
 # Contributing to Daily Bing Search Automation
 
 Thank you for considering contributing to this project! Here are some guidelines to help you get started.
@@ -366,4 +361,3 @@ Never commit sensitive information like:
 - Account credentials
 
 Use GitHub Secrets for sensitive data.
-```
